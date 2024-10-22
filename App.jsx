@@ -26,21 +26,21 @@ const App = () => {
     //       </View>
     //     </View>
     // </View>
-    <View style={{width: '100%', height: '100%'}}>
-      <View style={{flex: 1, backgroundColor: 'orange', justifyContent: 'center', alignItems: 'center', gap: 20}}>
-       <TextInput style={{borderWidth: 1, borderColor: 'black', padding: 10, width: "80%"}}
-       placeholder='Enter your name'
-       placeholderTextColor={'red'}
-       />
-       <TextInput style={{borderWidth: 1, borderColor: 'black', padding: 10, width: "80%"}}
-       placeholder='Enter your name'
-       placeholderTextColor={'red'}
-       />
-       <TouchableOpacity style={{backgroundColor: 'red', padding: 10, width: "80%"}}
-       activeOpacity={0.5}
-       >
-         <Text style={{color: 'white', textAlign: 'center', fontSize: 14, fontWeight: 'bold'}}>Submit</Text>
-       </TouchableOpacity>
+    <View style={{flex: 1, width: '100%'}}>
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',
+        gap: 20
+      }}>
+      <Image source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}} width={80} height={80}/>
+      <Text style={{color: 'black', fontSize: 20}}>React-Native</Text>
+        <TextInput style={{borderWidth: 1, width: '80%', borderRadius: 10, padding: 10}} placeholder='Enter Your Email'
+        placeholderTextColor={'#000000'}
+        />
+        <TextInput style={{borderWidth: 1, width: '80%', borderRadius: 10, padding: 10}} placeholder='Enter Your Password'
+        placeholderTextColor={'#000000'}
+        />
+        <TouchableOpacity activeOpacity={0.5} style={{backgroundColor: 'blue', padding: 15, width: '80%', borderRadius: 10}}>
+          <Text style={{color: 'white', fontSize: 16, textAlign: 'center'}}>Button</Text>
+        </TouchableOpacity>
       </View>
     </View>
   )
