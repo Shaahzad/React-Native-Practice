@@ -2,15 +2,17 @@ import { View, Text, TouchableOpacity, Button, Image, TextInput, ScrollView, Ale
 import React, { useState } from 'react'
 
 const App = () => {
-  const [value, setValue] = useState([]);
+  const [value, setValue] = useState('');
+  const [todo, setTodo] = useState([]);
   
-
   const AddTodo = () => {
-    const oldTodos = [...value]
+    const oldTodos = [...todo]
+    console.log(oldTodos)
     oldTodos.push(value)
-    setValue(oldTodos)
+    setTodo(oldTodos)
     setValue('')
   }
+
   return (
     <View style={{flex: 1, width: '100%'}}>
 <View style={{flex: 5, justifyContent: 'center', alignItems: 'center', gap: 20}}>
@@ -22,13 +24,15 @@ const App = () => {
   style={{borderWidth: 1, width: '80%', padding: 10, borderRadius: 10}} placeholder='Enter Todo'/>
   <TouchableOpacity 
   activeOpacity={0.5}
-  onPress={()=> AddTodo()}
+  onPress={AddTodo}
   style={{backgroundColor: 'red', padding: 10, borderRadius: 10, width: '80%'}}>
     <Text style={{color: 'white', textAlign: 'center'}}>Submit</Text>
   </TouchableOpacity>
 </View>
 <View style={{flex: 1}}>
-  <Text style={{color: 'black', fontSize: 20, textAlign: 'center', flexDirection: 'row'}}>{value}</Text>
+  <Text style={{fontSize: 20, color: 'black', marginVertical: 5, textAlign: 'center'}}>
+    {todo ? todo : 'No Todo'}
+  </Text>
 </View>
 </View>
    
