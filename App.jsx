@@ -1,11 +1,15 @@
-import { View, Text, TouchableOpacity, Button, Image, TextInput, ScrollView, Alert } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, TouchableOpacity, TextInput, Alert, FlatList } from 'react-native'
+import React, { useEffect, useState } from 'react'
 
 const App = () => {
   const [value, setValue] = useState('');
   const [todo, setTodo] = useState([]);
   
   const AddTodo = () => {
+    if(!value) {
+      Alert.alert('Error', 'Please Enter Todo')
+      return
+    }
     const oldTodos = [...todo]
     console.log(oldTodos)
     oldTodos.push(value)
@@ -13,9 +17,19 @@ const App = () => {
     setValue('')
   }
 
+
+  useEffect(() => {
+    console.log(todo)
+  }, [todo])
+  const renderItem = ({item}) => (
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 10}}>
+    <Text style={{fontSize: 40, color: 'black'}}>{item}</Text> 
+    </View>
+  )
+
   return (
     <View style={{flex: 1, width: '100%'}}>
-<View style={{flex: 5, justifyContent: 'center', alignItems: 'center', gap: 20}}>
+<View style={{flex: 3, justifyContent: 'center', alignItems: 'center', gap: 20}}>
 <Text style={{fontSize: 30, color: 'black', marginBottom: 20}}>Todo App</Text>
   <TextInput 
   placeholderTextColor={'#000000'}
@@ -29,11 +43,18 @@ const App = () => {
     <Text style={{color: 'white', textAlign: 'center'}}>Submit</Text>
   </TouchableOpacity>
 </View>
-<View style={{flex: 1}}>
-  <Text style={{fontSize: 20, color: 'black', marginVertical: 5, textAlign: 'center'}}>
-    {todo ? todo : 'No Todo'}
-  </Text>
-</View>
+<View style={{flex: 3, alignItems: 'center'}}>
+  {todo.length === 0 ? (
+    <Text style={{fontSize: 30, color: 'black'}}>No Todo</Text>
+  ): 
+  <FlatList
+  showsVerticalScrollIndicator={false}
+  data={todo}
+  renderItem={renderItem}
+  keyExtractor={(item, index) => index.toString()}
+  />
+  }
+  </View>
 </View>
    
     // <View style={{flex: 1}}>
