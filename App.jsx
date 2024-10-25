@@ -1,61 +1,61 @@
-import { View, Text, TouchableOpacity, TextInput, Alert, FlatList } from 'react-native'
-import React, { useEffect, useState } from 'react'
+// import { View, Text, TouchableOpacity, TextInput, Alert, FlatList } from 'react-native'
+// import React, { useEffect, useState } from 'react'
 
-const App = () => {
-  const [value, setValue] = useState('');
-  const [todo, setTodo] = useState([]);
+// const App = () => {
+//   const [value, setValue] = useState('');
+//   const [todo, setTodo] = useState([]);
   
-  const AddTodo = () => {
-    if(!value) {
-      Alert.alert('Error', 'Please Enter Todo')
-      return
-    }
-    const oldTodos = [...todo]
-    console.log(oldTodos)
-    oldTodos.push(value)
-    setTodo(oldTodos)
-    setValue('')
-  }
+//   const AddTodo = () => {
+//     if(!value) {
+//       Alert.alert('Error', 'Please Enter Todo')
+//       return
+//     }
+//     const oldTodos = [...todo]
+//     console.log(oldTodos)
+//     oldTodos.push(value)
+//     setTodo(oldTodos)
+//     setValue('')
+//   }
 
 
-  useEffect(() => {
-    console.log(todo)
-  }, [todo])
-  const renderItem = ({item}) => (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 10}}>
-    <Text style={{fontSize: 40, color: 'black'}}>{item}</Text> 
-    </View>
-  )
+//   useEffect(() => {
+//     console.log(todo)
+//   }, [todo])
+//   const renderItem = ({item}) => (
+//     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 10}}>
+//     <Text style={{fontSize: 40, color: 'black'}}>{item}</Text> 
+//     </View>
+//   )
 
-  return (
-    <View style={{flex: 1, width: '100%'}}>
-<View style={{flex: 3, justifyContent: 'center', alignItems: 'center', gap: 20}}>
-<Text style={{fontSize: 30, color: 'black', marginBottom: 20}}>Todo App</Text>
-  <TextInput 
-  placeholderTextColor={'#000000'}
-  value={value}
-  onChangeText={(text)=> setValue(text)}
-  style={{borderWidth: 1, width: '80%', padding: 10, borderRadius: 10}} placeholder='Enter Todo'/>
-  <TouchableOpacity 
-  activeOpacity={0.5}
-  onPress={AddTodo}
-  style={{backgroundColor: 'red', padding: 10, borderRadius: 10, width: '80%'}}>
-    <Text style={{color: 'white', textAlign: 'center'}}>Submit</Text>
-  </TouchableOpacity>
-</View>
-<View style={{flex: 3, alignItems: 'center'}}>
-  {todo.length === 0 ? (
-    <Text style={{fontSize: 30, color: 'black'}}>No Todo</Text>
-  ): 
-  <FlatList
-  showsVerticalScrollIndicator={false}
-  data={todo}
-  renderItem={renderItem}
-  keyExtractor={(item, index) => index.toString()}
-  />
-  }
-  </View>
-</View>
+//   return (
+//     <View style={{flex: 1, width: '100%'}}>
+// <View style={{flex: 3, justifyContent: 'center', alignItems: 'center', gap: 20}}>
+// <Text style={{fontSize: 30, color: 'black', marginBottom: 20}}>Todo App</Text>
+//   <TextInput 
+//   placeholderTextColor={'#000000'}
+//   value={value}
+//   onChangeText={(text)=> setValue(text)}
+//   style={{borderWidth: 1, width: '80%', padding: 10, borderRadius: 10}} placeholder='Enter Todo'/>
+//   <TouchableOpacity 
+//   activeOpacity={0.5}
+//   onPress={AddTodo}
+//   style={{backgroundColor: 'red', padding: 10, borderRadius: 10, width: '80%'}}>
+//     <Text style={{color: 'white', textAlign: 'center'}}>Submit</Text>
+//   </TouchableOpacity>
+// </View>
+// <View style={{flex: 3, alignItems: 'center'}}>
+//   {todo.length === 0 ? (
+//     <Text style={{fontSize: 30, color: 'black'}}>No Todo</Text>
+//   ): 
+//   <FlatList
+//   showsVerticalScrollIndicator={false}
+//   data={todo}
+//   renderItem={renderItem}
+//   keyExtractor={(item, index) => index.toString()}
+//   />
+//   }
+//   </View>
+// </View>
    
     // <View style={{flex: 1}}>
     //     <View style={{flex: 1, backgroundColor: 'orange', justifyContent: 'center', alignItems: 'center'}}>
@@ -99,6 +99,23 @@ const App = () => {
     // </View>
     
     
+//   )
+// }
+
+// export default App
+
+
+import { View, Text } from 'react-native'
+import React from 'react'
+import Login from './src/Screen/Login'
+
+const App = () => {
+  return (
+    <View>
+      <Text>
+        <Login/>
+      </Text>
+    </View>
   )
 }
 
