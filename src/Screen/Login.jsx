@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import Icon from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Login = () => {
   return (
@@ -8,7 +8,7 @@ const Login = () => {
         <View style={styles.banner}>
         <View>
           <Text>
-          <Icon name="Chevron-left" size={30} color="#4F8EF7" />     
+          <AntDesign name="logo-facebook" size={30} color="#4F8EF7"/>     
           </Text>
         </View>
         </View>
