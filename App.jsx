@@ -107,15 +107,13 @@
 
 import { View, Text, StatusBar } from 'react-native'
 import React from 'react'
-import Login from './Login'
+import Login from './src/Screen/Login'
 
 const App = () => {
   return (
-    <View>
-      <StatusBar backgroundColor={'#1A2980'}/>
-      <Text>
-        <Login/>
-      </Text>
+    <View style={{flex: 1}}>
+    <StatusBar backgroundColor={'#1A2980'}/>
+    <Login/>
     </View>
   )
 }
