@@ -1,16 +1,24 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import IonIcon from 'react-native-vector-icons/Ionicons'
 
 const Login = () => {
   return (
     <View style={styles.container}>
         <View style={styles.banner}>
-        <View>
-          <Text>
-          <AntDesign name="logo-facebook" size={30} color="#4F8EF7"/>     
-          </Text>
-        </View>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View>
+            <IonIcon name='chevron-back' size={20} color='white'/>
+          </View>
+          <View style={{marginLeft: 30}}> 
+            <Text style={{color: 'white', fontSize: 18, fontWeight: 'bold'}}>
+              Student Login
+            </Text>
+          </View>
+          </View>
+          <View>
+            <Image source={require('../assets/Banner.png')}/>
+          </View>
         </View>
     </View>
   )
@@ -23,7 +31,7 @@ const styles = StyleSheet.create({
     },
     banner:{
         flex: 1,
-        backgroundColor: 'red'
+        backgroundColor: 'blue'
     }     
 }) 
 

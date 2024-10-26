@@ -105,13 +105,14 @@
 // export default App
 
 
-import { View, Text } from 'react-native'
+import { View, Text, StatusBar } from 'react-native'
 import React from 'react'
-import Login from './src/Screen/Login'
+import Login from './Login'
 
 const App = () => {
   return (
     <View>
+      <StatusBar backgroundColor={'#1A2980'}/>
       <Text>
         <Login/>
       </Text>
