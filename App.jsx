@@ -108,13 +108,14 @@
 import { View, Text, StatusBar } from 'react-native'
 import React from 'react'
 import Login from './src/Screen/Login'
-import LinearGradient from 'react-native-linear-gradient'
+import Dashboard from './src/Screen/Dashboard'
 
 const App = () => {
   return (
     <View style={{flex: 1}}>
     <StatusBar backgroundColor={'#090979'}/>
-    <Login/>
+    {/* <Login/> */}
+    <Dashboard/>
     </View>
   ) 
 }
