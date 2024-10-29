@@ -53,7 +53,7 @@ export default function Dashboard() {
       <View style={{backgroundColor: '#EEEEEE', width: '88%',  borderBottomLeftRadius: 5, borderBottomRightRadius: 5}}>
         <Text style={{width: "70%", fontSize: 15, lineHeight: 20, color: 'black', fontWeight: 'bold'}}>Lorem ipsum dolor sit amet, consectetur dipiscing elit. lo</Text>
         <View>
-        <Text>Tuesday 12 March 2022</Text>
+        <Text style={{color:'#1A2980'}}>Tuesday 12 March 2022</Text>
         <Button>Apply Now</Button>
       </View>
       </View>
