@@ -1,4 +1,4 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, Touchable, TouchableOpacity } from 'react-native'
 import React from 'react'
 import LinearGradient from 'react-native-linear-gradient'
 import IonIcon from "react-native-vector-icons/Ionicons"
@@ -43,18 +43,20 @@ export default function Dashboard() {
      </View>
     </LinearGradient>
     </View>
-    <View style={{flex: 4}}>
+    <View style={{flex: 5}}>
      <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 20}}>
       <Text style={{fontSize: 15, fontWeight: 'bold', color: 'black'}}>Upcoming Events</Text>
       <IonIcon name="chevron-forward-outline" size={20} color={'black'}/>
      </View>
      <View style={{padding: 15}}>
-      <Image source={require('../assets/Event.png')} style={{width: 290, height: 177, borderTopLeftRadius: 5, borderTopRightRadius: 5}}/>
+      <Image source={require('../assets/Event.png')} style={{width: 290, height: 130, borderTopLeftRadius: 5, borderTopRightRadius: 5}}/>
       <View style={{backgroundColor: '#EEEEEE', width: '88%',  borderBottomLeftRadius: 5, borderBottomRightRadius: 5}}>
-        <Text style={{width: "70%", fontSize: 15, lineHeight: 20, color: 'black', fontWeight: 'bold'}}>Lorem ipsum dolor sit amet, consectetur dipiscing elit. lo</Text>
-        <View>
+        <Text style={{ fontSize: 15, color: 'black', fontWeight: 'bold', padding: 10}}>Lorem ipsum dolor sit amet, consectetur dipiscing elit. lo</Text>
+        <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 10}}>
         <Text style={{color:'#1A2980'}}>Tuesday 12 March 2022</Text>
-        <Button>Apply Now</Button>
+        <TouchableOpacity activeOpacity={0.5} style={{padding: 10, borderRadius: 50, width: 100, alignItems: 'center', backgroundColor:'#1A2980'}}>
+          <Text style={{color:'white', fontWeight: 'bold'}}>Apply Now</Text>
+        </TouchableOpacity>
       </View>
       </View>
      </View>
