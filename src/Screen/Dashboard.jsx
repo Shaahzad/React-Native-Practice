@@ -3,6 +3,7 @@ import React from 'react'
 import LinearGradient from 'react-native-linear-gradient'
 import IonIcon from "react-native-vector-icons/Ionicons"
 import { Button, ProgressBar } from 'react-native-paper'
+import BottomTab from '../Components/BottomTab'
 
 export default function Dashboard() {
   return (
@@ -19,17 +20,17 @@ export default function Dashboard() {
         </View>
       </LinearGradient>
     </View>
-    <View style={{flex: 0.8}}>
+    <View style={{flex: 1}}>
     <View style={{flex: 1, padding: 20}}>
       <Text style={{fontSize: 18, fontWeight: 'bold'}}>Asslam u Alikum</Text>
       <Text style={{fontSize: 22, fontWeight: 'bold', color: '#1A2980'}}>Usama Hussain</Text>
     </View>
     </View>
-    <View style={{flex: 1.5, padding: 15}}>
+    <View style={{flex: 1.8, padding: 15}}>
     <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#ffffffc0', '#f2f2f2df', '#f2f2f2']} style={{flex: 1,
       borderRadius: 5
     }}>
-     <View style={{padding: 20}}>
+     <View style={{padding: 10}}>
       <View>
         <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black'}}>Programming Course</Text>
         <Text>Php, Laravel, Mysql</Text>
@@ -44,7 +45,7 @@ export default function Dashboard() {
     </LinearGradient>
     </View>
     <View style={{flex: 5}}>
-     <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 20}}>
+     <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 15}}>
       <Text style={{fontSize: 15, fontWeight: 'bold', color: 'black'}}>Upcoming Events</Text>
       <IonIcon name="chevron-forward-outline" size={20} color={'black'}/>
      </View>
@@ -60,6 +61,9 @@ export default function Dashboard() {
       </View>
       </View>
      </View>
+    </View>
+    <View style={{flex: 1.2}}>
+      <BottomTab/>
     </View>
     </View>
   )
