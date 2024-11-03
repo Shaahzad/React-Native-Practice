@@ -1,13 +1,13 @@
 import { View, Text, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import IonIcon from "react-native-vector-icons/Ionicons"
 import { Link } from '@react-navigation/native'
 
 export default function BottomTab() {
   return (
-    <View style={{flex: 1, padding: 20, backgroundColor: '#1A2980', marginHorizontal: 10, marginVertical: 10, borderTopLeftRadius: 10, borderTopRightRadius: 10,}}>
+    <View style={{flex: 1, padding: 10, backgroundColor: '#1A2980', marginVertical: 5, borderTopLeftRadius: 10, borderTopRightRadius: 10,}}>
        <View style={{flex: 1, flexDirection: 'row', gap: 20, justifyContent: 'space-around', alignItems: 'center'}}>
-       <View>
+       <View> 
         <IonIcon style={{alignSelf: 'center'}} name='home-outline' size={25} color={'#26D0CE'}/>
         <Text style={{color: '#26D0CE'}}>Home</Text>
         </View>

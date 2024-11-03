@@ -62,7 +62,7 @@ export default function Dashboard() {
       </View>
      </View>
     </View>
-    <View style={{flex: 1.2}}>
+    <View style={{flex: 1.3, padding: 20}}>
       <BottomTab/>
     </View>
     </View>

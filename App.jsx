@@ -109,13 +109,15 @@ import { View, Text, StatusBar } from 'react-native'
 import React from 'react'
 import Login from './src/Screen/Login'
 import Dashboard from './src/Screen/Dashboard'
+import Courses from './src/Screen/Courses'
 
 const App = () => {
   return (
     <View style={{flex: 1}}>
     <StatusBar backgroundColor={'#090979'}/>
     {/* <Login/> */}
-    <Dashboard/>
+    {/* <Dashboard/> */}
+    <Courses/>
     </View>
   ) 
 }
