@@ -9,8 +9,7 @@ export default function Dashboard() {
   return (
     <View style={{flex: 1}}>
     <View style={{flex: 1}}>
-      <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#1A2980', '#87CEFA']} style={{flexDirection: 'row',
-      }}>
+      <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#1A2980', '#87CEFA']} style={{flexDirection: 'row'}}>
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 20, paddingLeft: '18%'}}>
         <Text style={{textAlign: 'center', color: 'white', fontSize: 20, fontWeight: 'bold'}}>Dashboard</Text>
         </View>
