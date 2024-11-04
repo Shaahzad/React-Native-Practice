@@ -110,6 +110,9 @@ import React from 'react'
 import Login from './src/Screen/Login'
 import Dashboard from './src/Screen/Dashboard'
 import Courses from './src/Screen/Courses'
+import Event from './src/Screen/Event'
+import Identitycard from './src/Screen/Identitycard'
+import Profile from './src/Screen/Profile'
 
 const App = () => {
   return (
@@ -117,7 +120,10 @@ const App = () => {
     <StatusBar backgroundColor={'#090979'}/>
     {/* <Login/> */}
     {/* <Dashboard/> */}
-    <Courses/>
+    {/* <Courses/> */}
+    {/* <Event/> */}
+    {/* <Identitycard/> */}
+    <Profile/>
     </View>
   ) 
 }
