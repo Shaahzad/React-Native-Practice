@@ -2,7 +2,7 @@ import { View, Text, Image, TextInput, TouchableOpacity, ScrollView } from 'reac
 import React from 'react'
 import IonIcon from "react-native-vector-icons/Ionicons"
 import LinearGradient from 'react-native-linear-gradient'
-export default function Login() {
+export default function Login({navigation}) {
   return (
     <View style={{flex: 1}}>
       <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#1A2980', '#87CEFA']} style={{flex: 1}}>
@@ -29,6 +29,7 @@ export default function Login() {
         style={{borderRadius: 5}}
         >
         <TouchableOpacity
+        onPress={()=> navigation.navigate('Dashboard')}
         activeOpacity={0.5} style={{padding: 15, width: '80%', flexDirection: 'row', justifyContent: 'space-between'}}>
             <Text style={{color: 'white', fontSize: 16, fontWeight: 'bold', paddingLeft: 10}}>Login</Text>
             <IonIcon name='chevron-forward' size={25} color={'white'} style={{paddingLeft: 10}}/>

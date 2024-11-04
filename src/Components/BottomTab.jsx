@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import IonIcon from "react-native-vector-icons/Ionicons"
 import { Link } from '@react-navigation/native'
 
-export default function BottomTab() {
+export default function BottomTab({navigation}) {
   return (
     <View style={{flex: 1, padding: 10, backgroundColor: '#1A2980', marginVertical: 5, borderTopLeftRadius: 10, borderTopRightRadius: 10,}}>
        <View style={{flex: 1, flexDirection: 'row', gap: 20, justifyContent: 'space-around', alignItems: 'center'}}>

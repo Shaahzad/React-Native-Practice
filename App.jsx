@@ -113,17 +113,26 @@ import Courses from './src/Screen/Courses'
 import Event from './src/Screen/Event'
 import Identitycard from './src/Screen/Identitycard'
 import Profile from './src/Screen/Profile'
+import Notification from './src/Screen/Notification'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
+const Stack = createNativeStackNavigator()
 const App = () => {
   return (
     <View style={{flex: 1}}>
     <StatusBar backgroundColor={'#090979'}/>
-    {/* <Login/> */}
-    {/* <Dashboard/> */}
-    {/* <Courses/> */}
-    {/* <Event/> */}
-    {/* <Identitycard/> */}
-    <Profile/>
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName='login' screenOptions={{headerShown: false}}>
+      <Stack.Screen name='login' component={Login}/>
+      <Stack.Screen name='Dashboard' component={Dashboard}/>
+      <Stack.Screen name='Courses' component={Courses}/>
+      <Stack.Screen name='Event' component={Event}/>
+      <Stack.Screen name='Identitycard' component={Identitycard}/>
+      <Stack.Screen name='Profile' component={Profile}/>
+      <Stack.Screen name='Notification' component={Notification}/>
+    </Stack.Navigator>
+    </NavigationContainer>
     </View>
   ) 
 }
