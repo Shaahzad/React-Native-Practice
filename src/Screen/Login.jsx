@@ -4,7 +4,7 @@ import IonIcon from "react-native-vector-icons/Ionicons"
 import LinearGradient from 'react-native-linear-gradient'
 export default function Login({navigation}) {
   return (
-    <View style={{flex: 1}}>
+    <ScrollView style={{flex: 1}}>
       <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#1A2980', '#87CEFA']} style={{flex: 1}}>
         <View style={{flexDirection: 'row', alignItems: 'center', paddingVertical: 30}}>
         <View style={{paddingLeft: 10}}>
@@ -37,6 +37,6 @@ export default function Login({navigation}) {
         </LinearGradient>
       </View>  
       </View>
-    </View>
+    </ScrollView>
   )
 }

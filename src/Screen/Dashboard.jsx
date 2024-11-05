@@ -5,7 +5,7 @@ import IonIcon from "react-native-vector-icons/Ionicons"
 import { Button, ProgressBar } from 'react-native-paper'
 import BottomTab from '../Components/BottomTab'
 
-export default function Dashboard() {
+export default function Dashboard({navigation}) {
   return (
     <View style={{flex: 1}}>
     <View style={{flex: 1}}>
@@ -14,8 +14,12 @@ export default function Dashboard() {
         <Text style={{textAlign: 'center', color: 'white', fontSize: 20, fontWeight: 'bold'}}>Dashboard</Text>
         </View>
         <View style={{alignItems: 'center', flexDirection: 'row', gap: 15, paddingRight: 20}}>
+          <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
         <IonIcon name='notifications-outline' size={25} color={'white'}/>
-        <IonIcon name='log-out-outline' size={25} color={'white'}/>
+          </TouchableOpacity>
+          <TouchableOpacity>
+        <IonIcon name='log-out-outline' size={25} color={'white'} onPress={() => navigation.navigate('login')}/>
+      </TouchableOpacity>
         </View>
       </LinearGradient>
     </View>

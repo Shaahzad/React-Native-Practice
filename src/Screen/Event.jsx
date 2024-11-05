@@ -4,7 +4,7 @@ import IonIcon from "react-native-vector-icons/Ionicons"
 import BottomTab from '../Components/BottomTab'
 import LinearGradient from 'react-native-linear-gradient'
 
-const Event = () => {
+const Event = ({navigation}) => {
   return (
 <View style={{flex: 1}}>
   <View style={{flex: 1}}>
@@ -13,8 +13,12 @@ const Event = () => {
 <Text style={{textAlign: 'center', color: 'white', fontSize: 20, fontWeight: 'bold'}}>Events</Text>
 </View>
 <View style={{alignItems: 'center', flexDirection: 'row', gap: 15, paddingRight: 20}}>
+  <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
      <IonIcon name='notifications-outline' size={25} color={'white'}/>
-     <IonIcon name='log-out-outline' size={25} color={'white'}/>
+  </TouchableOpacity>
+  <TouchableOpacity>
+     <IonIcon name='log-out-outline' size={25} color={'white'} onPress={() => navigation.navigate('login')}/>
+  </TouchableOpacity>
    </View>
 </LinearGradient>
   </View>

@@ -1,21 +1,25 @@
-import { View, Text, Image, ScrollView } from 'react-native'
+import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import LinearGradient from 'react-native-linear-gradient'
 import IonIcon from "react-native-vector-icons/Ionicons"
 import { TextInput } from 'react-native-paper'
 import BottomTab from '../Components/BottomTab'
 
-const Profile = () => {
+const Profile = ({navigation}) => {
   return (
-    <View style={{flex: 1}}>
+    <ScrollView showsVerticalScrollIndicator={false} style={{flex: 1}}>
         <View style={{flex: 0.5}}>
         <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#1A2980', '#87CEFA']} style={{flexDirection: 'row'}}>
 <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 20, paddingLeft: '18%'}}>
 <Text style={{textAlign: 'center', color: 'white', fontSize: 20, fontWeight: 'bold'}}>Profile</Text>
 </View>
 <View style={{alignItems: 'center', flexDirection: 'row', gap: 15, paddingRight: 20}}>
+  <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
      <IonIcon name='notifications-outline' size={25} color={'white'}/>
-     <IonIcon name='log-out-outline' size={25} color={'white'}/>
+  </TouchableOpacity>
+  <TouchableOpacity>
+     <IonIcon name='log-out-outline' size={25} color={'white'} onPress={() => navigation.navigate('login')}/>
+  </TouchableOpacity>
    </View>
        </LinearGradient>
         </View>
@@ -44,7 +48,7 @@ const Profile = () => {
         <View style={{flex: 0.6, padding: 10}}>
         <BottomTab/>
         </View>
-    </View>
+    </ScrollView>
   )
 }
 
