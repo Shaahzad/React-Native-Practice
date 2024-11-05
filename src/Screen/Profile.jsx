@@ -37,7 +37,7 @@ const Profile = ({navigation}) => {
         </View>
         </View>
         <View style={{flex: 1.3}}>
-        <View style={{paddingHorizontal: 20, paddingVertical: 8}}>
+        <View style={{paddingHorizontal: 20, paddingVertical: 12}}>
         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Change Password</Text>
         </View>
         <View style={{paddingHorizontal: 20, paddingVertical: 5, gap: 10}}>

@@ -8,7 +8,7 @@ export default function BottomTab() {
   return (
     <View style={{flex: 1, padding: 10, backgroundColor: '#1A2980', marginVertical: 5, borderTopLeftRadius: 10, borderTopRightRadius: 10,}}>
        <View style={{flex: 1, flexDirection: 'row', gap: 20, justifyContent: 'space-around', alignItems: 'center'}}>
-       <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}> 
+      <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}> 
         <IonIcon style={{alignSelf: 'center'}} name='home-outline' size={25} color={'#26D0CE'}/>
         <Text style={{color: '#26D0CE'}}>Home</Text>
         </TouchableOpacity>

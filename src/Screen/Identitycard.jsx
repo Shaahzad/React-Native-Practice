@@ -41,7 +41,7 @@ const Identitycard = ({navigation}) => {
       </View>
       </View>
     </View>
-    <View style={{flex: 0.9, padding: 20}}>
+    <View style={{flex: 0.9, padding: 10}}>
       <BottomTab/>
     </View>
     </View>

@@ -52,7 +52,7 @@ const Courses = ({navigation}) => {
       <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black'}}>New Courses</Text>
     </View>
  </View>
- <View style={{flex: 2.1}}>
+ <View style={{flex: 2.2}}>
   <View style={{paddingHorizontal: 20, paddingVertical: 10}}>
     <Image source={require('../assets/graphic.png')} style={{width: 320, height: 150, borderTopLeftRadius: 20, borderTopRightRadius: 20}}/>
     <View style={{backgroundColor: '#EEEEEE', padding: 10}}>
@@ -61,7 +61,7 @@ const Courses = ({navigation}) => {
     </View>
   </View>
  </View>
- <View style={{flex: 0.8, padding: 20}}>
+ <View style={{flex: 0.8, padding: 10}}>
   <BottomTab/>
  </View>
 </View>  

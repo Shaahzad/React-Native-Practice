@@ -65,7 +65,7 @@ export default function Dashboard({navigation}) {
       </View>
      </View>
     </View>
-    <View style={{flex: 1.3, padding: 20}}>
+    <View style={{flex: 1.3, padding: 10}}>
       <BottomTab/>
     </View>
     </View>
